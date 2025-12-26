@@ -41,6 +41,8 @@ def main():
     logger.info(f"{GREEN}NyroMCP is running with extended toolset...{RESET}")
     try:
         mcp.run(transport="stdio")
+    except KeyboardInterrupt:
+        print(f"\n{GREEN}Server stopped by user.{RESET}")
     except Exception as e:
         logger.critical(f"{RED}FATAL ERROR: FastMCP terminated unexpectedly: {e}{RESET}")
 
