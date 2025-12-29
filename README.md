@@ -9,7 +9,7 @@
 
 *A secure, interactive bridge for AI agents to master your local environment.*
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage)
+[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Documentation](#documentation)
 
 </div>
 
@@ -30,59 +30,48 @@
 
 ## <a id="installation"></a>📦 Installation
 
-1. **Clone the repository**:
+### Prerequisites
 
-    ```bash
-    git clone https://github.com/TheRemyyy/nyro-mcp.git
-    cd nyro-mcp
-    ```
+- Python 3.10 or higher.
 
-2. **Install dependencies**:
+### Setup
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+git clone https://github.com/TheRemyyy/nyro-mcp.git
+cd nyro-mcp
+pip install -r requirements.txt
+```
 
 ## <a id="usage"></a>🚀 Usage
 
-Nyro MCP is designed to be run as a standalone MCP server.
+Run the utility using the module entry point:
 
 ```bash
-# Run using the module entry point
 python -m src.nyro_mcp.main
 ```
 
-### Configuration
+Upon starting, you will be prompted to enter the **ROOT** directory path. This directory acts as the secure sandbox for all future operations.
 
-Upon starting the server, you will be interactively prompted to specify the **ROOT** directory. This directory acts as a secure sandbox; all file operations are restricted to this path to ensure safety.
+---
 
-```text
-NyroMCP - Enhanced File System MCP Server
-Please enter the ROOT directory path for this session:
-ROOT Path > C:\path\to\your\sandbox
-```
+## <a id="documentation"></a>📄 Documentation
 
-## <a id="structure"></a>🏗️ Project Structure
+For deep-dive information on every tool and security measure, please refer to our documentation:
 
-```
-nyro-mcp/
-├── src/
-│   └── nyro_mcp/
-│       ├── tools/          # Modular tool definitions
-│       │   ├── fs_read.py  # Read operations
-│       │   ├── fs_write.py # Write operations
-│       │   └── system.py   # System command execution
-│       ├── config.py       # Configuration & constants
-│       ├── main.py         # Application entry point
-│       ├── server.py       # FastMCP server instance
-│       └── utils.py        # Helper functions & logging
-├── requirements.txt
-└── README.md
-```
+### Tool Manuals
+- 📂 **[Filesystem: Read](docs/tools/filesystem-read.md)** — Listing, reading, searching, and metadata.
+- 📝 **[Filesystem: Write](docs/tools/filesystem-write.md)** — Creating, modifying, moving, and deleting.
+- ⚙️ **[System Operations](docs/tools/system.md)** — Shell command execution and timeouts.
+
+### Technical & Security
+- 📖 **[Documentation Overview](docs/overview.md)** — Project summary and structure.
+- 🔒 **[Security & Sandboxing](docs/technical/security.md)** — **READ THIS FIRST**.
+- 🏗️ **[Architecture](docs/technical/architecture.md)** — Internal design principles.
+- ⚙️ **[Configuration Reference](docs/technical/configuration.md)** — Settings and startup.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
